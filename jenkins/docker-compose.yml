@@ -1,0 +1,12 @@
+version: '2.2'
+services:
+  jen:
+    image: xs_jenkins
+    user: root
+    volumes:
+      - /var/jenkins_home:/var/jenkins_home
+      - /usr/local/bin/docker:/usr/bin/docker
+      - /usr/local/tomcat/webapps:/usr/local/tomcat/webapps
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8090:8080"

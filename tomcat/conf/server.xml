@@ -69,15 +69,16 @@
     <!-- <Connector port="8080" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443" /> -->
-     <Connector port="8080" 
+     <Connector port="8080"
+          useSendfile="off"
           maxHttpHeaderSize="8192"
-           maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
-           enableLookups="false" redirectPort="8443" acceptCount="100"
-           connectionTimeout="20000" disableUploadTimeout="true"
-           compression="on"
-           compressionMinSize="1024"
-           noCompressionUserAgents="gozilla, traviata"
-           compressableMimeType="text/html,text/xml,text/plain,text/css,text/javascript"/>
+          maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+          enableLookups="false" redirectPort="8443" acceptCount="100"
+          connectionTimeout="20000" disableUploadTimeout="true"
+          compression="on"
+          compressionMinSize="1024"
+          noCompressionUserAgents="gozilla, traviata"
+          compressableMimeType="text/html,text/xml,text/plain,text/css,text/javascript"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"

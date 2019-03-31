@@ -1,9 +1,9 @@
 version: '2.2'
 services:
-  tom:
-    name: tom
+  tomcat:
+    container_name: tom
     image: tomcat:8.0
-    memory: 50m
+    mem_limit: 50m
     volumes:
       - /usr/local/tomcat/webapps:/usr/local/tomcat/webapps
       - /usr/local/tomcat/conf:/usr/local/tomcat/conf

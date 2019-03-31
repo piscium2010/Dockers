@@ -1,6 +1,7 @@
 version: '2.2'
 services:
-  jen:
+  jenkins:
+    container_name: jen
     image: xs_jenkins
     user: root
     volumes:
